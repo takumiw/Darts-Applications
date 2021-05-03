@@ -7,6 +7,7 @@ RUN apt update && apt install -y --no-install-recommends \
     ca-certificates \
     curl \
     libbz2-dev \
+    libffi-dev \
     libreadline-dev \
     libssl-dev \
     libsqlite3-dev \
