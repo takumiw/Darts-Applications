@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<head>
+    <title>COUNT-UP</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <h1>
+    ROUND: {{_round}}
+    <br>
+    SCORE: {{total_score}}
+    <br>
+    <form action="/countup" method="POST">
+
+    <input type="hidden" name="_round" value={{_round}} checked>
+    <input type="hidden" name="total_score" value={{total_score}} checked>
+    <br>
+    <input type="number" name="score">
+    </form>
+    </h1>
+
+</body>
+
+{% endblock %}
